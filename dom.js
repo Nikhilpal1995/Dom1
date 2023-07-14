@@ -67,15 +67,91 @@
 
 // QUERYSELECTORALL //
 
-var titles = document.querySelectorAll('.title');
+//var titles = document.querySelectorAll('.title');
 
-console.log(titles);
-titles[0].textContent = 'Hello';
+//console.log(titles);
+//titles[0].textContent = 'Hello';
 
-var odd = document.querySelectorAll('li:nth-child(odd)');
-var even = document.querySelectorAll('li:nth-child(even)');
+//var odd = document.querySelectorAll('li:nth-child(odd)');
+//var even = document.querySelectorAll('li:nth-child(even)');
 
-for(var i = 0; i < odd.length; i++){
-   odd[i].style.backgroundColor = '#f4f4f4'; 
-   even[i].style.backgroundColor = '#ccc';
-}
+//for(var i = 0; i < odd.length; i++){
+//   odd[i].style.backgroundColor = '#f4f4f4'; 
+//   even[i].style.backgroundColor = '#ccc';
+//}
+
+//Traversing the DOM//
+
+var itemlist = document.querySelector('#items');
+
+//parentNode
+//console.log(itemlist.parentNode);
+//itemlist.parentNode.style.backgroundColor = '#f4f4f4';
+//console.log(itemlist.parentNode.parentNode.parentNode);
+
+//parentElement
+
+//console.log(itemlist.parentElement);
+//itemlist.parentElement.style.backgroundColor = '#f4f4f4';
+//console.log(itemlist.parentElement.parentElement.parentElement);
+
+//childNodes
+//console.log(itemlist.childNodes);
+
+//console.log(itemlist.children);
+//console.log(itemlist.children[1]);
+
+//itemlist.children[1].style.backgroundColor = 'yellow';
+
+//FirstChild
+//console.log(itemlist.firstChild);
+
+//firstElementChild
+//console.log(itemlist.firstElementChild);
+//itemlist.firstElementChild.textContent = 'Hello 1';
+
+ //lastChild
+//console.log(itemlist.lastChild);
+
+//lastElementChild
+//console.log(itemlist.lastElementChild);
+//itemlist.lastElementChild.textContent = 'Hello 4';
+
+//nextSibling
+//console.log(itemlist.nextSibling);
+
+//nextElementSibling
+//console.log(itemlist.nextElementSibling);
+
+//previosSibling
+//console.log(itemlist.previousSibling);
+//previousElementSibling
+//console.log(itemlist.previousElementSibling);
+//itemlist.previousElementSibling.style.color = 'green';
+
+ // createElement
+
+ // create a div
+ var newDiv = document.createElement('div');
+
+ // Add class
+ newDiv.className='hello';
+
+ //Add id
+ newDiv.id ='hello';
+
+ //Add attribute
+ newDiv.setAttribute('title','Hello Div');
+
+ //create text node
+ var newDivText = document.createTextNode('Hello World');
+
+ //Add text to div
+ newDiv.appendChild(newDivText);
+
+ var container = document.querySelector('header .container');
+ var h1 = document.querySelector('header h1');
+ console.log(newDiv);
+ newDiv.style.fontSize = '30px';
+
+ container.insertBefore(newDiv, h1);
